@@ -1,0 +1,16 @@
+﻿Unity = CS.UnityEngine
+
+local starTextComp
+function start()
+	print("lua start...")
+    print("StarText object", StarText)
+	starTextComp = StarText:GetComponent("Text")
+end
+
+function update()
+    -- 获取存储的金额数值
+    local moneyAmount = Unity.PlayerPrefs.GetInt("MoneyAmount")
+    
+    -- 获取 starText 组件，并更新其文本内容
+    starTextComp.text = moneyAmount
+end
