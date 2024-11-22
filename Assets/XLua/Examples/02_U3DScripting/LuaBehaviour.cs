@@ -34,6 +34,8 @@ namespace XLuaTest
         private Action luaStart;
         private Action luaUpdate;
         private Action luaOnDestroy;
+        private Action<Collision2D> onCollisionEnter2D;
+        private Action<Collider2D> onTriggerEnter2D;
 
         private LuaTable scriptScopeTable;
 
@@ -68,10 +70,28 @@ namespace XLuaTest
             scriptScopeTable.Get("start", out luaStart);
             scriptScopeTable.Get("update", out luaUpdate);
             scriptScopeTable.Get("ondestroy", out luaOnDestroy);
+            scriptScopeTable.Get("onCollisionEnter2D", out onCollisionEnter2D);
+            scriptScopeTable.Get("onTriggerEnter2D", out onTriggerEnter2D);
 
             if (luaAwake != null)
             {
                 luaAwake();
+            }
+        }
+        
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (onCollisionEnter2D != null)
+            {
+                onCollisionEnter2D(collision);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (onTriggerEnter2D != null)
+            {
+                onTriggerEnter2D(collision);
             }
         }
 

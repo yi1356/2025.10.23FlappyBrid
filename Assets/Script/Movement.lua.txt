@@ -1,0 +1,36 @@
+﻿local speed = 3;
+local startNum = 6;
+local endNum = -6;
+local paramTextComp
+local y = 0;
+local z = 0;
+
+function start()
+    if param then
+        paramTextComp = param:GetComponent("Text")
+        if paramTextComp.text == "1" then
+            speed = 0.3;
+            startNum = 8;
+            endNum = -8;
+        elseif paramTextComp.text == "2" then
+            speed = 3;
+            startNum = 7.77;
+            endNum = -7.77;
+        end
+    end
+
+    y = self.transform.position.y;
+    z = self.transform.position.z;
+end
+
+function update()
+    
+    self.transform.position = CS.UnityEngine.Vector3(self.transform.position.x - speed * CS.UnityEngine.Time.deltaTime, y,z)
+    if self.transform.position.x <= endNum then
+        if self.gameObject.tag == "GameOver" then
+            CS.UnityEngine.Object.Destroy(self.gameObject);
+        else
+            self.transform.position = CS.UnityEngine.Vector3(startNum,y,z);
+        end
+    end
+end

@@ -278,7 +278,6 @@ GameObject:
   m_Component:
   - component: {fileID: 379069571}
   - component: {fileID: 379069570}
-  - component: {fileID: 379069568}
   - component: {fileID: 379069572}
   - component: {fileID: 379069573}
   m_Layer: 0
@@ -288,19 +287,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &379069568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379069566}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f619b875949681945a65182de9318160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyAmoutText: {fileID: 1415393862}
 --- !u!212 &379069570
 SpriteRenderer:
   m_ObjectHideFlags: 0

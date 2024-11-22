@@ -1,0 +1,40 @@
+﻿local maxTime = 0;
+local timer = 0;
+local chooseObstacle = 0;
+
+function start()
+    maxTime = 1.5;
+end
+
+function update()
+
+    timer = timer + CS.UnityEngine.Time.deltaTime;
+    if timer >= maxTime then
+        
+        generateObstacle();
+        timer = 0;
+    end
+end
+
+function generateObstacle()
+
+    chooseObstacle = math.floor(CS.UnityEngine.Random.Range(1, 9));
+
+    if chooseObstacle == 1 then
+        CS.UnityEngine.Object.Instantiate(Obstacle1);
+    elseif chooseObstacle  == 2 then
+        CS.UnityEngine.Object.Instantiate(Obstacle2);
+    elseif chooseObstacle  == 3 then
+        CS.UnityEngine.Object.Instantiate(Obstacle3);
+    elseif chooseObstacle  == 4 then
+        CS.UnityEngine.Object.Instantiate(Obstacle4);
+    elseif chooseObstacle  == 5 then
+        CS.UnityEngine.Object.Instantiate(Obstacle5);
+    elseif chooseObstacle  == 6 then
+        CS.UnityEngine.Object.Instantiate(Obstacle6);
+    elseif chooseObstacle  == 7 then
+        CS.UnityEngine.Object.Instantiate(Obstacle7);
+    elseif chooseObstacle  == 8 then
+        CS.UnityEngine.Object.Instantiate(Obstacle8);
+    end
+end

@@ -1,0 +1,48 @@
+﻿local rb;
+local moneyAmout = 0;
+local isJumping = false;
+local gameManagerComp;
+local moneyAmoutTextComp;
+local fly;
+local clam;
+
+function start()
+    rb = self:GetComponent("Rigidbody2D");
+    isJumping = false;
+    CS.UnityEngine.Time.timeScale = 1;
+    moneyAmoutTextComp = moneyAmoutText:GetComponent("Text");
+    gameManagerComp = gameManager:GetComponent("GameManager");
+    clam = self:GetComponent("AudioSource");
+    fly = flyAudio:GetComponent("AudioSource");
+    rb.velocity = CS.UnityEngine.Vector2(0, 7);
+end
+
+function update()
+    moneyAmout = CS.UnityEngine.PlayerPrefs.GetInt("MoneyAmout");
+    moneyAmoutTextComp.text = moneyAmout;
+
+    if CS.UnityEngine.Input.GetMouseButtonDown(0) and isJumping == false then
+        rb.velocity = CS.UnityEngine.Vector2(0, 7);
+        isJumping = false;
+        fly:Play();
+    end
+    
+end
+
+function onCollisionEnter2D(collision)
+    isJumping = false;
+end
+
+function onTriggerEnter2D(collision)
+            
+    if collision.tag == "GameOver" then
+        CS.UnityEngine.Time.timeScale = 0;
+        gameManagerComp:GameOver();
+    end
+    
+    if collision.tag == "StarClam" then
+        moneyAmout = moneyAmout + 1;
+        CS.UnityEngine.PlayerPrefs.SetInt("MoneyAmout", moneyAmout);
+        clam:Play();
+    end
+end
