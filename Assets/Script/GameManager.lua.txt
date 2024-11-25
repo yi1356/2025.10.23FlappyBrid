@@ -1,0 +1,10 @@
+﻿
+function start()
+    buttonOver:GetComponent("Button").onClick:AddListener(function()
+        CS.UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+    end)
+    buttonExit:GetComponent("Button").onClick:AddListener(function()
+        CS.UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        CS.UnityEngine.Time.timeScale = 1;
+    end)
+end

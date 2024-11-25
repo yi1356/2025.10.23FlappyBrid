@@ -1,7 +1,6 @@
 ﻿local rb;
 local moneyAmout = 0;
 local isJumping = false;
-local gameManagerComp;
 local moneyAmoutTextComp;
 local fly;
 local clam;
@@ -11,7 +10,6 @@ function start()
     isJumping = false;
     CS.UnityEngine.Time.timeScale = 1;
     moneyAmoutTextComp = moneyAmoutText:GetComponent("Text");
-    gameManagerComp = gameManager:GetComponent("GameManager");
     clam = self:GetComponent("AudioSource");
     fly = flyAudio:GetComponent("AudioSource");
     rb.velocity = CS.UnityEngine.Vector2(0, 7);
@@ -37,7 +35,8 @@ function onTriggerEnter2D(collision)
             
     if collision.tag == "GameOver" then
         CS.UnityEngine.Time.timeScale = 0;
-        gameManagerComp:GameOver();
+        textOver.gameObject:SetActive(true);
+        imageOver.gameObject:SetActive(true);
     end
     
     if collision.tag == "StarClam" then

@@ -1,0 +1,6 @@
+﻿
+function update()
+    if CS.UnityEngine.Input.GetMouseButtonDown(0) then
+        CS.UnityEngine.Time.timeScale = 0;
+    end
+end 

@@ -3,7 +3,6 @@
 local starTextComp
 function start()
 	print("lua start...")
-    print("StarText object", StarText)
 	starTextComp = StarText:GetComponent("Text")
 end
 
