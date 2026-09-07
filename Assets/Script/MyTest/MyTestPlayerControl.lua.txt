@@ -1,0 +1,44 @@
+local rb;
+local moneyAmount = 0;
+local isJumping =false;
+local moneyAmountTexComp;
+local fly;
+local clam;
+
+function start()
+    --typeof(CS.UnityEngine.Light)
+    rb=self:GetComponent("Rigidbody2D");
+    isJumping=false;
+    CS.UnityEngine.Time.timeScale = 1;
+    moneyAmountTexComp=moneyAmountText:GetComponent("Text");
+    clam=self:GetComponent("AudioSource");
+    fly=flyAudio:GetComponent("AudioSource");
+    rb.velocity = CS.UnityEngine.Vector2(0,7);
+end 
+
+function update()
+     moneyAmount= CS.UnityEngine.PlayerPrefs.GetInt("MoneyAmount");
+     moneyAmountTexComp.text=moneyAmount;
+
+    if CS.UnityEngine.Input.GetMouseButtonDown(0) and isJumping==false then 
+        rb.velocity = CS.UnityEngine.Vector2(0,7);
+        isJumping=false;
+        fly:Play();
+    end
+end 
+
+function onCollisionEnter2D(collision)
+    isJumping=false;
+end 
+function onTriggerEnter2D(collision)
+    if collision.tag=="GameOver" then
+        CS.UnityEngine.Time.timeScale = 0;
+        textOver.gameObject:SetActive(true);
+        imageOver.gameObject:SetActive(true);
+    end 
+    if collision.tag == "StartClam" then
+         moneyAmount = moneyAmount+1;
+         CS.UnityEngine.PlayerPrefs.SetInt("MoneyAmount",moneyAmount);
+         clam:Play();
+    end
+end

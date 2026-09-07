@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: aa20ac7cae87c6a41b69e1978ccbf615, type: 3}
+  luaScript: {fileID: 4900000, guid: 79dca04dbb7013b4da761b715d907e14, type: 3}
   injections: []
 --- !u!1 &255631726
 GameObject:
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: dfaf638f7addae54f9543ca4bf19fe29, type: 3}
+  luaScript: {fileID: 4900000, guid: de2a6b9abf4de474c97ff9e5dac2407c, type: 3}
   injections:
   - name: moneyAmountText
     value: {fileID: 902243272}
@@ -2291,7 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -2861,7 +2861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 734e40de514ae9a42a08ed88ee714d64, type: 3}
+  luaScript: {fileID: 4900000, guid: 97bc4bedd695de341af2246010fb1bc7, type: 3}
   injections:
   - name: Obstacle1
     value: {fileID: 3308358057432117292, guid: e22ce5aeb3393aa4cb1269f331bcf8c5, type: 3}
@@ -3184,7 +3184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9173d38911503c4a9a371b0760bdd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luaScript: {fileID: 4900000, guid: 7e3ac461649bca74488d8f30c3f4d8e9, type: 3}
+  luaScript: {fileID: 4900000, guid: 7cb201db294b8ba4ead08932117a490e, type: 3}
   injections:
   - name: prarm
     value: {fileID: 950756383}
@@ -3545,7 +3545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2044397310}
   - component: {fileID: 2044397309}
-  - component: {fileID: 2044397308}
   m_Layer: 0
   m_Name: BackgroundFon
   m_TagString: Untagged
@@ -3553,18 +3552,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2044397308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044397307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0032b9090ce10b44855c417fc61fca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2044397309
 SpriteRenderer:
   m_ObjectHideFlags: 0

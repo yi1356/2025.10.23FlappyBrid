@@ -13,7 +13,6 @@ function start()
 	print("lua start...")
 	--Z：lightObject 是我们要挂载的物体的名称
 	print("injected object", lightObject)
-	--Z：调用C#的成员方法需要用 :  来调用，不能 .
 	lightCpnt= lightObject:GetComponent(typeof(CS.UnityEngine.Light))
 end
 

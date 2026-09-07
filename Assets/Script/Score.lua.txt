@@ -1,4 +1,8 @@
-﻿local score = 0;
+﻿
+
+
+--Z：Lua这里声明变量要赋值，否则后面用时可能报错
+local score = 0;
 local timer = 0;
 local maxTime = 0;
 

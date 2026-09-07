@@ -1,0 +1,41 @@
+--作用：产生障碍物并移动
+
+local maxTime=0;
+local timer=0;
+local chooseObjtacle = 0;
+
+function start()
+    maxTime=1.5;
+end
+
+function update()
+    timer = timer+CS.UnityEngine.Time.deltaTime;
+    if timer > maxTime then
+        generateObstacle();
+        timer = 0;
+    end
+end 
+
+
+function generateObstacle()
+
+    chooseObjtacle=math.floor(CS.UnityEngine.Random.Range(1,9));
+
+    if chooseObjtacle==1 then
+    CS.UnityEngine.Object.Instantiate(Obstacle1);
+    elseif chooseObjtacle==2 then
+    CS.UnityEngine.Object.Instantiate(Obstacle2);
+    elseif chooseObjtacle==3 then
+    CS.UnityEngine.Object.Instantiate(Obstacle3);
+    elseif chooseObjtacle==4 then
+    CS.UnityEngine.Object.Instantiate(Obstacle4);
+    elseif chooseObjtacle==5 then
+    CS.UnityEngine.Object.Instantiate(Obstacle5);
+    elseif chooseObjtacle==6 then
+    CS.UnityEngine.Object.Instantiate(Obstacle6);
+    elseif chooseObjtacle==7 then
+    CS.UnityEngine.Object.Instantiate(Obstacle7);
+    elseif chooseObjtacle==8 then
+    CS.UnityEngine.Object.Instantiate(Obstacle8);
+    end
+end

@@ -1,7 +1,7 @@
 ﻿local rb;
-local moneyAmout = 0;
+local moneyAmount = 0;
 local isJumping = false;
-local moneyAmoutTextComp;
+local moneyAmountTextComp;
 local fly;
 local clam;
 
@@ -9,18 +9,18 @@ function start()
     rb = self:GetComponent("Rigidbody2D");
     isJumping = false;
     CS.UnityEngine.Time.timeScale = 1;
-    moneyAmoutTextComp = moneyAmoutText:GetComponent("Text");
+    moneyAmountTextComp = moneyAmountText:GetComponent("Text");
     clam = self:GetComponent("AudioSource");
     fly = flyAudio:GetComponent("AudioSource");
     rb.velocity = CS.UnityEngine.Vector2(0, 7);
 end
 
 function update()
-    moneyAmout = CS.UnityEngine.PlayerPrefs.GetInt("MoneyAmout");
-    moneyAmoutTextComp.text = moneyAmout;
+    moneyAmount = CS.UnityEngine.PlayerPrefs.GetInt("MoneyAmount");
+    moneyAmountTextComp.text = moneyAmount;
 
     if CS.UnityEngine.Input.GetMouseButtonDown(0) and isJumping == false then
-        rb.velocity = CS.UnityEngine.Vector2(0, 7);
+        rb.velocity = CS.UnityEngine.Vector2(0, 7);--Z：这里是点击后，改变y值速度实现上升
         isJumping = false;
         fly:Play();
     end
@@ -40,8 +40,8 @@ function onTriggerEnter2D(collision)
     end
     
     if collision.tag == "StarClam" then
-        moneyAmout = moneyAmout + 1;
-        CS.UnityEngine.PlayerPrefs.SetInt("MoneyAmout", moneyAmout);
+        moneyAmount = moneyAmount + 1;
+        CS.UnityEngine.PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
         clam:Play();
     end
 end

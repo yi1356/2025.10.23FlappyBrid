@@ -1,0 +1,23 @@
+
+--Z：作用，根据累计的时间，判断是否加速
+local score = 0;
+local timer=0;
+local maxTime=0;
+
+function Start()
+    score = 0;
+    maxTime=0.15;
+end
+
+function update()
+    timer = timer+CS.UnityEngine.Time.deltaTime;
+    if timer > maxTime then
+        timer=0;
+        score = score + 1;
+        if score %100==0 then 
+             CS.UnityEngine.Time.timeScale=CS.UnityEngine.Time.timeScale + 0.05;
+        end
+    end
+        
+
+end
